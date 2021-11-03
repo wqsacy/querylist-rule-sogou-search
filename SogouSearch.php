@@ -50,7 +50,7 @@
 		}
 
 		public function page ( $page = 1 , $realURL = false , $realSearch = false ) {
-			$data = $this->query( $page )
+			$list = $this->query( $page )
 			             ->query()
 			             ->getData( function ( $item ) use ( $realURL )
 			             {
@@ -59,8 +59,10 @@
 			             } );
 			
 			if($realSearch){
-				$data['list'] = $data;
+				$data['list'] = $list;
 				$data['real_search'] = $this->getRelSearch($page);
+			}else{
+				$data = $list;
 			}
 			
 			return $data;
