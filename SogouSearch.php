@@ -58,8 +58,10 @@
 				             return $item;
 			             } );
 			
-			if($realSearch)
+			if($realSearch){
+				$data['list'] = $data;
 				$data['real_search'] = $this->getRelSearch($page);
+			}
 			
 			return $data;
 		}
