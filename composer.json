@@ -1,0 +1,21 @@
+{
+  "name": "wangqs/querylist-rule-sogou-search",
+  "description": "QueryList Plugin: sogou with abstract. QueryList搜狗搜索插件,可增加搜索结果简介和关联搜索词",
+  "require": {
+    "PHP": ">=7.0"
+  },
+  "require-dev": {
+    "jaeger/querylist": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "QL\\Ext\\": ""
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wangqs"
+    }
+  ]
+}
