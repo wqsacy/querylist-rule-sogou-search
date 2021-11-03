@@ -58,8 +58,13 @@
 				             return $item;
 			             } );
 			
-			if($realSearch){
-				$data[0]['rel_search'] = $this->getRelSearch($page);
+			if($realSearch && $data->count()){
+				$data->transform(function ($item, $key) use ($page){
+					if($key===0){
+						$item['rel_search'] = $this->getRelSearch($page);
+					}
+					return $item;
+				});
 			}
 			
 			return $data;
