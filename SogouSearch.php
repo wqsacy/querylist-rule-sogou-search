@@ -105,7 +105,7 @@
 
 		public function getRelSearch ($page=1) {
 			
-			$list = $this->query( 1 )
+			$list = $this->query( $page )
 			             ->rules( [
 				             'word' => ['a' , 'text'],
 			             ] )
